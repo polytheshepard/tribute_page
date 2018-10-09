@@ -1,0 +1,347 @@
+@import url('fonts.css');
+/* Japanese seamless wave pattern is attributed to: www.freevector.com*/
+
+/* Universal paragraph alignment */
+
+h2, p, dl {
+    padding: 0 200px;
+}
+
+cite {
+    padding: 0 60px;
+    color: #ff0000;
+    opacity: 0.5;
+}
+
+html {
+    background-image: url('/images/Japanese_red.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-repeat-y: repeat;
+}
+
+body {
+    background-color: #fff;
+    height: 100%;
+    width: 80%;
+    margin: auto;
+}
+
+::selection {
+    background: #ff0000;
+    color: #fff;
+}
+
+::-moz-selection {
+    background: #ff0000;
+    color: #fff;
+}
+
+/* Animation */
+
+h1 {
+    opacity: 1;
+    animation-name: fadeInText;
+    animation-iteration-count: 1;
+    animation-duration: 1.3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.heart,
+.heart:after,
+.heart:before {
+    animation-name: changeColour;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2.5s;
+}
+
+@keyframes changeColour {
+    0% {
+        background-color: #e71616;
+    }
+    50% {
+        background-color: #ff646b;
+    }
+    100% {
+        background-color: #e71616;
+    }
+}
+
+/* Main Headings */
+#main-img {
+    margin: auto;
+    display: block;
+    width: 50%;
+}
+
+h1 {
+    font-family: Raleway, sans-serif;
+    font-size: 60px;
+    text-transform: uppercase;
+    text-align: right;
+    word-spacing: 3px;
+    padding: 20px 50px;
+    margin: 0;
+}
+
+h1 > span {
+    font-family: Raleway, sans-serif;
+    font-weight: 100;
+    color: #666666;
+}
+
+h2 {
+    font-family: Oswald, sans-serif;
+    font-size: 40px;
+    color: #ff0000;
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+/* Quotes */
+
+blockquote {
+    width: 800px;
+    height: 100px;
+    margin: auto;
+}
+
+blockquote > p {
+    padding: 0;
+    text-align: center;
+    font-size: 27px;
+    color: #ff0000;
+}
+
+blockquote p::before {
+    content: '\201C';
+}
+
+blockquote p::after {
+    content: '\201D';
+}
+
+p, cite, dl{
+    font-family: Raleway, sans-serif;
+    font-size: 20px;
+}
+
+p {
+    margin-bottom: 50px;
+    line-height: 30px;
+}
+
+/* Timeline */
+/* dt {
+    font-weight: bold;
+    margin-top: 60px;
+}
+
+dd {
+
+} */
+
+table {
+    width: 85%;
+}
+
+th, td {
+    font-family: Raleway, sans-serif;
+    font-size: 20px;
+    padding: 10px 0;
+}
+
+th {
+    width: 30%;
+    text-align: right;
+    padding: 0 20px;
+}
+
+
+/* Books Grid */
+
+.container {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    justify-items: center;
+    align-items: center;
+    padding: 0 140px;
+    margin: auto;
+}
+
+.books-grid {
+    position: relative;
+}
+
+.books-grid img {
+    width: auto;
+    height: 300px;
+    background-size: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    opacity: 0;
+    transition: 0.4s ease-in;
+    background-color: #ff0000;
+}
+
+.books-grid img:hover, .overlay:hover{
+    opacity: 1;
+}
+
+.text {
+    color: #fff;
+    font-size: 25px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: Raleway, sans-serif;
+}
+
+/* Footer styling */
+/* hr {
+    width: auto;
+    margin: 50px 0;
+    padding: 2px;
+    border: 0px;
+    background-color: #000;
+} */
+
+.heart {
+    background-color: #e71616;
+    display: inline-block;
+    height: 15px;
+    margin: 0 15px;
+    position: relative;
+    top: 0;
+    transform: rotate(-45deg);
+    width: 15px;
+}
+
+.heart:before,
+.heart:after {
+    content: '';
+    background-color: #e71616;
+    border-radius: 50%;
+    height: 15px;
+    position: absolute;
+    width: 15px;
+}
+
+.heart:before {
+    top: -7px;
+    left: 0;
+}
+
+.heart:after {
+    left: 7px;
+    top: 0;
+}
+
+footer {
+    background-color: #000;
+    height: 100%;
+}
+
+
+footer > p {
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    padding-top: 36px;
+}
+
+footer > p > a {
+    text-underline-position: under;
+    color: #e71616;
+}
+
+.highlight {
+    color: #e71616;
+    flex: 1;
+    background-image: linear-gradient(to right, #e71616 0, #e71616 100%);
+    background-repeat: no-repeat;
+    transition: background 0.7s;
+    background-size: 0 100%;
+}
+
+.highlight:hover {
+    background-size: 100% 100%;
+    color: #fff;
+}
+
+/* Responsive features
+@media (max-width: 890px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+
+    .books-grid > img{
+        height: 600px;
+    }
+    
+    h1 {
+        padding: 0 90px;
+        text-align: left;
+        font-size: 90px;
+    }
+
+    #main-img {
+        width: auto;
+        height: 400px;
+        margin: auto 0;
+    }
+
+    h2, #main-img {
+        padding: 0 120px;
+    }
+
+    h2 {
+        font-size: 80px;
+    }
+
+    p, dl{
+        padding: 0 10px;
+        margin-left: 120px;
+        font-size: 40px;
+        line-height: 50px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 550px) {
+    .container {
+        grid-template-columns: repeat(1, 1fr);
+        margin: 100px;
+    }
+
+    .books-grid > img{
+        height: 1000px;
+    }
+
+} */
